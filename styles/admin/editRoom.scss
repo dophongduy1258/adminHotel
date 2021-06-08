@@ -1,0 +1,42 @@
+@import "../variables";
+
+.form-edit-room {
+  width: 500px;
+  // height: 600px;
+  height: fit-content;
+  margin: 70px auto;
+  .wrap-from {
+    .title {
+      width: 100%;
+      padding: 20px 0;
+      background-color: $color7;
+      .text {
+        margin: 0;
+        text-align: center;
+        font-weight: 600;
+        color: $color4;
+      }
+    }
+    .wrap-input {
+      padding: 20px;
+      .input-text {
+        margin-bottom: 20px;
+      }
+      .form-action {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        button {
+          margin-left: 20px;
+          a {
+            color: $color4;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

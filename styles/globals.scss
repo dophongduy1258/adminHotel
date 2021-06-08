@@ -1,0 +1,59 @@
+@import "./custom-style.scss";
+
+html,
+body {
+  background-color: $color3;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  .widget {
+    background-color: $color7;
+  }
+  .contents {
+    flex-grow: 1;
+    .header {
+      width: 100%;
+      height: 68px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      .nav-list {
+        // float: right;
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 200px;
+        display: flex;
+        margin-right: 100px;
+        // background-color: $color5;
+        .label-user {
+          background-color: $color3;
+          .avatar {
+            margin-right: 8px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

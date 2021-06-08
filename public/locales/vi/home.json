@@ -1,0 +1,21 @@
+{
+    "title" :"Xin chào ! Huyền",
+    "name_label-hotel":"Khách sạn",
+    "name_label-apartment":"Căn hộ",
+    "name_label-carRental": "Thuê xe",
+    "name_label-takeAndPickUpCustomer" : "Dịch vụ đưa đón",
+    "findHotel_label":"Tìm kiếm khách sạn",
+    "checkIn_label":"Ngày nhận phòng",
+    "checkOut_label":"Ngày trả phòng",
+    "guest_label":"Khách",
+    "room_facilitys_text":"Tiện nghi phòng",
+    "wifi_label":"Wifi",
+    "pet_label":"Thú cưng",
+    "hotWater_label":"Máy nước nóng",
+    "spa_label":"Spa",
+    "pool_label":"Hồ bơi",
+    "searchForm_btn":"Tìm kiếm",
+    "aroundYou_label":"Xung quanh bạn",
+    "favoriteDestination_label":"Điểm đến yêu thích",
+    "auxiliaryService_label":"Dịch vụ phụ trợ"
+}
