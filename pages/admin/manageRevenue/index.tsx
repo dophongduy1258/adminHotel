@@ -21,28 +21,19 @@ import "moment/locale/vi";
 import { GET_PAYMENTS } from "../../../graphql/payment/payment";
 import { useQuery } from "@apollo/client";
 
-export default function ManageHistoryPayment() {
+export default function ManageRevenue() {
   const { loading, error, data } = useQuery(GET_PAYMENTS);
 
   if (loading) return <Loading />;
   if (error || !data) return <h2>Error</h2>;
 
   const result = data.getPayments.map((value, idx) => {
-    return (
-      <TableRow className="list-item">
-        <TableCell align="center">{idx}</TableCell>
-        <TableCell align="center">{value.nameUser}</TableCell>
-        <TableCell align="center">{value.email}</TableCell>
-        <TableCell align="center">{value.orderDetail}</TableCell>
-        <TableCell align="center">{value.codeVoucher}</TableCell>
-        <TableCell className="item-status-true" align="center">
-          <b>{value.paymentMethod}</b>
-        </TableCell>
-        <TableCell align="center">{value.createAt}</TableCell>
-        <TableCell align="center">{value.total.toLocaleString()} VNĐ</TableCell>
-      </TableRow>
-    );
+    const revenue = 0;
+    const result = revenue + value.total;
+    return result;
   });
+
+  console.log(result);
 
   return (
     <MainLayout>

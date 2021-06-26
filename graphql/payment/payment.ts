@@ -6,9 +6,12 @@ export const GET_PAYMENTS = gql`
       id
       paymentMethod
       orderDetail
-      checkout
+      total
+      codeVoucher
+      nameUser
       email
       createAt
+      
     }
   }
 `;

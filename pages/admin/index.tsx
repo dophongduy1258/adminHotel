@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import Head from "next/head";
 import MainLayout from "../../components/layout/mainLayout";
 
@@ -11,7 +12,18 @@ export default function Admin() {
       </Head>
 
       <div className="admin">
-        <h2>Nothing here</h2>
+        <Box
+          style={{ marginLeft: "300px", marginTop: "150px", display: "flex" }}
+          className="tabs-menu"
+        >
+          <h2>Comming soon </h2>
+          <div className="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </Box>
       </div>
     </MainLayout>
   );

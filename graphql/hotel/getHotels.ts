@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
 export const GET_HOTELS = gql`
-  query getHotels($address: String) {
-    getHotels(address: $address) {
+  query getHotels($location: String) {
+    getHotels(location: $location) {
       id
       nameHotel
       imgHotel

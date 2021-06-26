@@ -32,8 +32,24 @@ export default function TabControl(props) {
             </Link>
           </Button>
           <Button>
+            <Link href="/admin/manageDecentralization">
+              <a>Phân quyền thành viên</a>
+            </Link>
+          </Button>
+          <Button>
             <Link href="/admin/manageHistoryPayment">
               <a>Lịch sử thanh toán</a>
+            </Link>
+          </Button>
+
+          <Button>
+            <Link href="/admin/manageBill">
+              <a>Quản lý hóa đơn</a>
+            </Link>
+          </Button>
+          <Button>
+            <Link href="/admin/manageRevenue">
+              <a>Doanh thu</a>
             </Link>
           </Button>
         </div>

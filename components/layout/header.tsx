@@ -40,7 +40,14 @@ export default function Header(props) {
           className="label-user"
           label={data ? data.getUser.name : "Admin"}
           avatar={
-            <Avatar className="avatar" src="/static/images/avatar/1.jpg" />
+            <Avatar
+              className="avatar"
+              src={
+                data.getUser.imgUser !== null
+                  ? data.getUser.imgUser
+                  : "https://static.wikia.nocookie.net/a5a3a397-8c0b-4c96-8d14-e8b029304119"
+              }
+            />
           }
         />
         <PopupState variant="popover" popupId="demo-popup-popover">

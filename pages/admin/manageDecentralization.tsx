@@ -10,18 +10,15 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-import Contents from "../../components/layout/contents";
-import Entry from "../../components/layout/entrys";
 import MainLayout from "../../components/layout/mainLayout";
 import Loading from "../../components/Loading/index";
-import moment from "moment";
-import "moment/locale/vi";
-import Skeleton from "@material-ui/lab/Skeleton";
-import BtnDeleteUser from "../../components/manageUser/btnDeleteUser";
 
+// graphql
 import { GET_USERS } from "../../graphql/customer/getUsers";
 import { useQuery } from "@apollo/client";
-export default function ManageUser() {
+import BtnDecentralization from "../../components/manageUser/btnDecentralization";
+
+export default function ManageDecentralization() {
   const { loading, error, data } = useQuery(GET_USERS);
 
   if (loading) return <Loading />;
@@ -32,25 +29,12 @@ export default function ManageUser() {
       <TableRow className="list-item">
         <TableCell align="center">{idx}</TableCell>
         <TableCell align="center">{value.name}</TableCell>
-        <TableCell align="center">
-          <Skeleton variant="rect" width={150} height={110} />
-        </TableCell>
-        <TableCell align="center">{value.phone}</TableCell>
-        <TableCell align="center">{value.CMND}</TableCell>
         <TableCell align="center">{value.email}</TableCell>
         <TableCell align="center">
           {value.role === true ? "Admin" : "Khách hàng"}
         </TableCell>
         <TableCell align="center">
-          {value.myWallet.toLocaleString()} VNĐ
-        </TableCell>
-        <TableCell align="center">
-          <div className="entry-btn">
-            <IconButton>
-              <i className="fas fa-edit"></i>
-            </IconButton>
-            <BtnDeleteUser userID={value.id} />
-          </div>
+          <BtnDecentralization userID={value.id} />
         </TableCell>
       </TableRow>
     );
@@ -70,7 +54,7 @@ export default function ManageUser() {
 
       <div className="entry">
         <h2 className="title animate__animated animate__fadeInDown">
-          Quản lý người dùng
+          Phân quyền thành viên
         </h2>
 
         <TableContainer component={Paper}>
@@ -82,12 +66,8 @@ export default function ManageUser() {
               <TableRow className="table-row">
                 <TableCell align="center">STT</TableCell>
                 <TableCell align="center">Họ và tên</TableCell>
-                <TableCell align="center">Hình ảnh</TableCell>
-                <TableCell align="center">Số điện thoại</TableCell>
-                <TableCell align="center">CMND</TableCell>
                 <TableCell align="center">Email</TableCell>
-                <TableCell align="center">Vai trò</TableCell>
-                <TableCell align="center">Ví tiền</TableCell>
+                <TableCell align="center">Quyền</TableCell>
                 <TableCell align="center"></TableCell>
               </TableRow>
             </TableHead>
